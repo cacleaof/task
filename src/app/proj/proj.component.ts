@@ -1,10 +1,6 @@
-import { Component } from '@angular/core';
-import Proj_json from '../../json-server/projetos.json'
-
-interface Proj {
-  id: number;
-  nome: string;
-}
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ProjService } from '../proj.service';
+import { Proj } from '../model/proj';
 
 @Component({
   selector: 'app-proj',
@@ -12,6 +8,17 @@ interface Proj {
   templateUrl: './proj.component.html',
   styleUrl: './proj.component.css'
 })
-export class ProjComponent {
-projetos: Proj[] = Proj_json;
+export class ProjComponent implements OnInit {
+
+  projetos: Proj[] = [];
+
+  constructor(private projService: ProjService ) {
+  }
+
+  ngOnInit(): void {
+    this.projService.getProjetos().subscribe(data => {
+      this.projetos = data;
+    });
+  }
+
 }
