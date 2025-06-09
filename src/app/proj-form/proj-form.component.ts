@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { ProjService } from '../proj.service';
+import { ProjService } from '../service/proj.service';
 
 interface NewProj {
   id: number;

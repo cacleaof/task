@@ -1,1 +1,17 @@
-<p>task works!</p>
+<div class="container">
+<h2>Tarefas</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let task of tasks">
+    <tr>
+      <td>{{task.id}}</td>
+      <td>{{task.nome}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
