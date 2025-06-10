@@ -1,9 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { ProjService } from '../service/proj.service';
+import { Proj } from '../model/proj';
 
 interface NewProj {
   id: number;
   nome: string;
+  descricao: string;
   seq: number;
   adm: number;
   pai: number;
@@ -17,6 +19,7 @@ interface NewProj {
 })
 export class ProjFormComponent {
   novoProjetoNome: string = '';
+  novoProjetoDesc: string = '';
 
   @Output() projetoAdicionado = new EventEmitter<void>();
 
@@ -24,7 +27,7 @@ export class ProjFormComponent {
 
   onSubmit(): void {
     if (this.novoProjetoNome.trim()) {
-      this.projService.addProjeto({ nome: this.novoProjetoNome.trim() })
+      this.projService.addProjeto({ nome: this.novoProjetoNome.trim(), descricao: this.novoProjetoDesc.trim() })
         .subscribe({
           next: (novoProj) => {
             console.log('Projeto adicionado:', novoProj);

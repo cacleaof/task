@@ -10,7 +10,7 @@ export class TaskService {
  private apiUrl = 'http://localhost:3000/tarefas';
 
   constructor(private http: HttpClient) { }
-    addTask(taskData: { nome: string }): Observable<Task> {
+    addTask(taskData: Partial<Task>): Observable<Task> {
       return this.http.post<Task>(this.apiUrl, taskData);
     }
 

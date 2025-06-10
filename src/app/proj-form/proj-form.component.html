@@ -3,13 +3,9 @@
   <form (ngSubmit)="onSubmit()">
     <div>
       <label for="nomeProjeto">Nome do Projeto:</label>
-      <input
-        type="text"
-        id="nomeProjeto"
-        [(ngModel)]="novoProjetoNome"
-        name="nomeProjeto"
-        required
-      >
+      <input type="text" id="nomeProjeto" [(ngModel)]="novoProjetoNome" name="nomeProjeto" required>
+      <label for="descProjeto">Descrição do Projeto:</label>
+      <input type="text" id="descProjeto" [(ngModel)]="novoProjetoDesc" name="descProjeto">
     </div>
     <button type="submit">Adicionar Projeto</button>
 

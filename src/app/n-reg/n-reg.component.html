@@ -1,0 +1,27 @@
+<form (ngSubmit)="addReg()">
+  <div>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" [(ngModel)]="reg.nome" required>
+  </div>
+  <div>
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao" [(ngModel)]="reg.descricao"></textarea>
+  </div>
+  <div>
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" name="valor" [(ngModel)]="reg.valor">
+  </div>
+  <div>
+    <label for="CD">C/D:</label>
+    <input type="text" id="CD" name="CD" [(ngModel)]="reg.CD">
+  </div>
+  <div>
+    <label for="tipo">Tipo:</label>
+    <input type="text" id="tipo" name="tipo" [(ngModel)]="reg.tipo">
+  </div>
+   <div>
+    <label for="venc">Vencimento:</label>
+    <input type="number" id="venc" name="venc" [(ngModel)]="reg.venc">
+  </div>
+   <button type="submit">Adicionar Despesa</button>
+</form>

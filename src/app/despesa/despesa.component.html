@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Fluxo de Caixa</h2>
+  <table class="table table-striped">
+  <thead>
+<tr>
+  <th>Nome</th>
+  <th>Descricao</th>
+  <th>Valor</th>
+  <th>C/D</th>
+  <th>Vencimento</th>
+</tr>
+  </thead>
+  <tbody *ngFor="let reg of regs">
+<tr><td>{{reg.nome}}</td>
+<td>{{reg.descricao}}</td>
+<td>{{reg.valor}}</td>
+<td>{{reg.CD}}</td>
+<td>{{reg.venc}}</td>
+</tr>
+  </tbody>
+  </table>
+</div>

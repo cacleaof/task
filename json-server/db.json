@@ -1,108 +1,164 @@
 {
   "projetos": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "fazenda",
+      "descricao": "",
       "seq": 1,
       "adm": 1,
       "pai": 0
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "casa",
+      "descricao": "",
       "seq": 0,
       "adm": 1,
       "pai": 0
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "Ap-BV Vender",
+      "descricao": "",
       "seq": 1,
       "adm": 1,
       "pai": 0
     },
     {
-      "id": 5,
+      "id": "5",
       "nome": "Ap-LH Vender",
+      "descricao": "",
       "seq": 1,
       "adm": 1,
       "pai": 0
     },
     {
-      "id": 6,
+      "id": "6",
       "nome": "Açai",
+      "descricao": "",
       "seq": 3,
       "adm": 1,
       "pai": 1
     },
     {
-      "id": 7,
+      "id": "7",
       "nome": "1o Andar",
+      "descricao": "",
       "seq": 3,
       "adm": 1,
       "pai": 1
     },
     {
-      "id": 8,
+      "id": "8",
       "nome": "Tratorito",
+      "descricao": "",
       "seq": 3,
       "adm": 1,
       "pai": 1
     },
     {
-      "id": 9,
+      "id": "9",
       "nome": "Biblioteca",
+      "descricao": "",
       "seq": 3,
       "adm": 1,
       "pai": 0
     },
     {
-      "id": 10,
+      "id": "10",
       "nome": "Despesa",
+      "descricao": "",
       "seq": 3,
       "adm": 1,
       "pai": 0
     },
     {
-      "id": 11,
+      "id": "11",
       "nome": "Fazendas MA",
+      "descricao": "",
       "seq": 3,
       "adm": 1,
       "pai": 0
     },
     {
-      "id": 12,
+      "id": "12",
       "nome": "Tarefas",
+      "descricao": "",
       "seq": 3,
       "adm": 1,
       "pai": 0
     },
     {
-      "id": 13,
+      "id": "13",
       "nome": "vamos usar json server",
+      "descricao": "",
       "seq": 3,
       "adm": 1,
       "pai": 0
     },
     {
-      "id": 14,
+      "id": "14",
       "nome": "vamos usar json server",
+      "descricao": "",
       "seq": 3,
       "adm": 1,
       "pai": 0
     },
     {
-      "id": 15,
+      "id": "15",
       "nome": "vamos usar json server com esse id",
+      "descricao": "",
       "seq": 3,
+      "adm": 1,
+      "pai": 0
+    },
+    {
+      "id": "4a67",
+      "nome": "Compass-Lanternagem",
+      "descricao": ""
+    },
+    {
+      "id": "781f",
+      "nome": "test"
+    },
+    {
+      "id": "24f9",
+      "nome": "sistema para casa",
+      "descricao": "fluxo de caixa"
+    }
+  ],
+  "tarefas": [
+    {
+      "id": "1",
+      "nome": "testar json server"
+    },
+    {
+      "id": "f1ee",
+      "nome": "Agililty",
+      "descricao": "segunda e quarta",
+      "seq": 1,
       "adm": 1,
       "pai": 0
     }
   ],
-  "tarefas":[
+  "registros": [
     {
-    "id": 1,
-    "nome": "testar json server"
+      "id": "1",
+      "nome": "Plano de Saude",
+      "descricao": "Qualicoorp - Plano de Saúde",
+      "valor": 3400,
+      "CD": "D",
+      "tipo": "m",
+      "venc": "10-07-2025"
+    },
+    {
+      "id": "51d6",
+      "nome": "Condominio",
+      "descricao": "Saint Albert",
+      "valor": 2100,
+      "CD": "D",
+      "tipo": "",
+      "venc": null
     }
   ]
 }

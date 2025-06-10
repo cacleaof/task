@@ -1,4 +1,5 @@
 export interface Proj {
-  id: number;
+  id: string;
   nome: string;
+  descricao: string;
 }

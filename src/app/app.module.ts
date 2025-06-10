@@ -11,18 +11,23 @@ import { AppComponent } from './app.component';
 import { ProjComponent } from './proj/proj.component';
 import { TaskComponent } from './task/task.component';
 import { ProjFormComponent } from './proj-form/proj-form.component';
+import { DespesaComponent } from './despesa/despesa.component';
+import { NTaskComponent } from './n-task/n-task.component';
+import { NRegComponent } from './n-reg/n-reg.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjComponent,
     TaskComponent,
-    ProjFormComponent
+    ProjFormComponent,
+    DespesaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NTaskComponent,
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,

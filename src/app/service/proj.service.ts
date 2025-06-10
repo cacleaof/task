@@ -11,7 +11,7 @@ export class ProjService {
 
   constructor(private http: HttpClient) { }
 
-  addProjeto(projetoData: { nome: string }): Observable<Proj> {
+  addProjeto(projetoData: { nome: string, descricao: string }): Observable<Proj> {
     return this.http.post<Proj>(this.apiUrl, projetoData);
   }
 
