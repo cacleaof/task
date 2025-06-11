@@ -2,12 +2,17 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DespesaService } from '../service/despesa.service';
 import { FormsModule } from '@angular/forms';
-import { Reg } from '../model/reg'
+import { Reg } from '../model/reg';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-n-reg',
    standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, MatDatepickerModule,
+        MatInputModule,
+        MatNativeDateModule],
   templateUrl: './n-reg.component.html',
   styleUrl: './n-reg.component.css'
 })

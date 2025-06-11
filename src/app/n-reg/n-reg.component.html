@@ -20,8 +20,12 @@
     <input type="text" id="tipo" name="tipo" [(ngModel)]="reg.tipo">
   </div>
    <div>
-    <label for="venc">Vencimento:</label>
-    <input type="number" id="venc" name="venc" [(ngModel)]="reg.venc">
+      <mat-form-field>
+      <mat-label>Vencimento</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="reg.venc">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
   </div>
    <button type="submit">Adicionar Despesa</button>
 </form>

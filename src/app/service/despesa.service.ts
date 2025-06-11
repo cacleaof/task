@@ -8,8 +8,8 @@ import { Reg } from '../model/reg';
 })
 export class DespesaService {
 
-  private apiUrl = 'https://back-json-v2ru.vercel.app/';
-  //private apiUrl = 'https://localhost:3000/';
+  //private apiUrl = 'https://back-json-v2ru.vercel.app/';
+  private apiUrl = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) { }
     addReg(RegData: Partial<Reg>): Observable<Reg> {

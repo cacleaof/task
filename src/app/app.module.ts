@@ -14,6 +14,9 @@ import { ProjFormComponent } from './proj-form/proj-form.component';
 import { DespesaComponent } from './despesa/despesa.component';
 import { NTaskComponent } from './n-task/n-task.component';
 import { NRegComponent } from './n-reg/n-reg.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { NRegComponent } from './n-reg/n-reg.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
