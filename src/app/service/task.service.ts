@@ -7,7 +7,7 @@ import { Task } from '../model/task';
   providedIn: 'root'
 })
 export class TaskService {
- private apiUrl = 'http://localhost:3000/tarefas';
+ private apiUrl = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) { }
     addTask(taskData: Partial<Task>): Observable<Task> {
@@ -15,6 +15,6 @@ export class TaskService {
     }
 
     getTasks(): Observable<Task[]> {
-      return this.http.get<Task[]>(this.apiUrl);
+      return this.http.get<Task[]>(this.apiUrl+'tasks');
     }
 }

@@ -1,9 +1,9 @@
 export interface Reg {
  id: string;
  nome: string;
-  descricao: string;
- valor: number;
-   CD: string;
+ descricao: string;
+ valor: string | number;
+ CD: string;
  tipo: string;
-venc: Date;
+ venc: string | Date;
 }

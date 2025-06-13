@@ -1,5 +1,12 @@
 <div class="container">
   <h2>Fluxo de Caixa</h2>
+  <div>
+    <label for="dataInicial">Data Inicial:</label>
+    <input type="date" id="dataInicial" [(ngModel)]="dataInicial">
+    <label for="dataFinal">Data Final:</label>
+    <input type="date" id="dataFinal" [(ngModel)]="dataFinal">
+    <button (click)="filtrarPorData()">Filtrar</button>
+  </div>
   <table class="table table-striped">
   <thead>
 <tr>
@@ -15,8 +22,15 @@
 <td>{{reg.descricao}}</td>
 <td>{{reg.valor}}</td>
 <td>{{reg.CD}}</td>
-<td>{{reg.venc}}</td>
+<td>{{reg.venc | date:'dd-MM-yyyy'}}</td><button (click)="deletar(reg)">Delete</button>
 </tr>
+  </tbody>
+    <tbody>
+  <tr>
+    <td colspan="2"><strong>Total:</strong></td>
+    <td>{{getTotal()}}</td>
+    <td colspan="2"></td>
+  </tr>
   </tbody>
   </table>
 </div>

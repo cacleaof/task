@@ -22,7 +22,7 @@
    <div>
       <mat-form-field>
       <mat-label>Vencimento</mat-label>
-      <input matInput [matDatepicker]="picker" [(ngModel)]="reg.venc">
+      <input matInput [matDatepicker]="picker" [(ngModel)]="reg.venc" name="venc">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
