@@ -1,4 +1,8 @@
-<form (ngSubmit)="addReg()">
+<form (ngSubmit)="updReg()">
+   <div>
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" [(ngModel)]="reg.id" readonly>
+  </div>
   <div>
     <label for="nome">Nome:</label>
     <input type="text" id="nome" name="nome" [(ngModel)]="reg.nome" required>
@@ -31,5 +35,5 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
   </div>
-   <button type="submit">Adicionar Despesa</button>
+   <button type="submit">Atualizar Registro</button>
 </form>

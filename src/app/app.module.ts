@@ -17,6 +17,7 @@ import { NRegComponent } from './n-reg/n-reg.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
+import { EditRegComponent } from './edit-reg/edit-reg.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
+    EditRegComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

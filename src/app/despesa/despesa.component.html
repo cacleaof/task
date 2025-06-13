@@ -10,7 +10,7 @@
   <table class="table table-striped">
   <thead>
 <tr>
-  <th>Nome</th>
+  <th>Nome/Html</th>
   <th>Descricao</th>
   <th>Valor</th>
   <th>C/D</th>
@@ -27,6 +27,7 @@
 <td>{{reg.valor}}</td>
 <td>{{reg.CD}}</td>
 <td>{{reg.venc | date:'dd-MM-yyyy'}}</td><button (click)="deletar(reg)">Delete</button>
+<button (click)="editar(reg)">Editar</button>
 </tr>
   </tbody>
     <tbody>

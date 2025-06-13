@@ -24,6 +24,7 @@ export class NRegComponent {
     CD: 'D',
     tipo: '',
     venc: new Date,
+    imagem: '',
   };
 
 
@@ -41,12 +42,13 @@ export class NRegComponent {
     const dataFormatada = `${ano}-${mes}-${dia}`;
 
     const regData: Partial<Reg> = {
-      nome: this.reg.nome.trim() || 'Sem nome',
-      descricao: this.reg.descricao.trim() || 'Sem descrição',
+      nome: this.reg.nome.trim() || '',
+      descricao: this.reg.descricao.trim() || '',
       valor: this.reg.valor.toString(),
       CD: this.reg.CD || 'D',
-      tipo: this.reg.tipo.trim() || 'Outros',
-      venc: dataFormatada // Formato YYYY-MM-DD sem timezone
+      tipo: this.reg.tipo.trim() || '',
+      venc: dataFormatada, // Formato YYYY-MM-DD sem timezone
+      imagem: this.reg.imagem.trim() || '',
     };
 
     // Log detalhado para debug
@@ -66,6 +68,7 @@ export class NRegComponent {
             CD: 'D',
             tipo: '',
             venc: new Date(),
+            imagem: '',
           };
         },
         error: (error) => {
