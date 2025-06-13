@@ -18,7 +18,11 @@
 </tr>
   </thead>
   <tbody *ngFor="let reg of regs">
-<tr><td>{{reg.nome}}</td>
+
+<tr><td *ngIf="reg.imagem; else: semimagem"><a href="{{reg.imagem}}" target="_blank">{{reg.nome}}</a></td>
+<ng-template #semimagem>
+  <td>{{reg.nome}}</td>
+</ng-template>
 <td>{{reg.descricao}}</td>
 <td>{{reg.valor}}</td>
 <td>{{reg.CD}}</td>
