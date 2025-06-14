@@ -51,7 +51,7 @@ export class EditRegComponent implements OnInit {
           CD: regToEdit.CD,
           tipo: regToEdit.tipo,
           venc: regToEdit.venc instanceof Date ? regToEdit.venc : new Date(regToEdit.venc),
-          imagem: regToEdit.imagem
+          imagem: regToEdit.imagem || ''
         };
         console.log('Dados carregados no formulário:', this.reg);
 
@@ -85,7 +85,7 @@ export class EditRegComponent implements OnInit {
                 CD: regToEdit.CD,
                 tipo: regToEdit.tipo,
                 venc: regToEdit.venc instanceof Date ? regToEdit.venc : new Date(regToEdit.venc),
-                imagem: regToEdit.imagem
+                imagem: regToEdit.imagem || ''
               };
               console.log('Dados carregados no formulário:', this.reg);
             } else {
