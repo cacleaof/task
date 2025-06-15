@@ -8,8 +8,8 @@ import { Reg } from '../model/reg';
 })
 export class DespesaService {
 
-  //private apiUrl = 'https://adubadica.vercel.app/api/';
-  private apiUrl = 'http://localhost:3000/api/';
+  private apiUrl = 'https://adubadica.vercel.app/api/';
+  //private apiUrl = 'http://localhost:3000/api/';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
