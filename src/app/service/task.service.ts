@@ -7,11 +7,12 @@ import { Task } from '../model/task';
   providedIn: 'root'
 })
 export class TaskService {
- private apiUrl = 'http://localhost:3000/';
+    //private apiUrl = 'https://adubadica.vercel.app/api/';
+ private apiUrl = 'http://localhost:3000/api/';
 
   constructor(private http: HttpClient) { }
     addTask(taskData: Partial<Task>): Observable<Task> {
-      return this.http.post<Task>(this.apiUrl, taskData);
+      return this.http.post<Task>(this.apiUrl+'task', taskData);
     }
 
     getTasks(): Observable<Task[]> {

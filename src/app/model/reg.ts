@@ -7,4 +7,7 @@ export interface Reg {
  tipo: string;
  venc: string | Date;
  imagem: string;
+ pago: boolean;
+ codbar: string;
+ pix: string;
 }

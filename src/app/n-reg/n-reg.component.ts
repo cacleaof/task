@@ -25,6 +25,8 @@ export class NRegComponent {
     tipo: '',
     venc: new Date,
     imagem: '',
+    pix: '',
+    codbar: '',
   };
 
 
@@ -49,6 +51,8 @@ export class NRegComponent {
       tipo: this.reg.tipo.trim() || '',
       venc: dataFormatada, // Formato YYYY-MM-DD sem timezone
       imagem: this.reg.imagem.trim() || '',
+      pix: this.reg.pix.trim() || '',
+      codbar: this.reg.codbar.trim() || '',
     };
 
     // Log detalhado para debug
@@ -69,6 +73,8 @@ export class NRegComponent {
             tipo: '',
             venc: new Date(),
             imagem: '',
+            pix: '',
+            codbar: '',
           };
         },
         error: (error) => {

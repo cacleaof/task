@@ -11,6 +11,7 @@
   <thead>
 <tr>
   <th>Nome/Html</th>
+  <th>Pagar</th>
   <th>Descricao</th>
   <th>Valor</th>
   <th>C/D</th>
@@ -23,10 +24,15 @@
 <ng-template #semimagem>
   <td>{{reg.nome}}</td>
 </ng-template>
+<td *ngIf="reg.pago; else: pagar"><button>Ok</button></td>
+<ng-template #pagar>
+  <td><button (click)="pagRegistro(reg)">Pagar</button></td>
+</ng-template>
 <td>{{reg.descricao}}</td>
 <td>{{reg.valor}}</td>
 <td>{{reg.CD}}</td>
-<td>{{reg.venc | date:'dd-MM-yyyy'}}</td><button (click)="deletar(reg)">Delete</button>
+<td>{{reg.venc | date:'dd-MM-yyyy'}}</td>
+<button (click)="deletar(reg)">Delete</button>
 <button (click)="editar(reg)">Editar</button>
 </tr>
   </tbody>

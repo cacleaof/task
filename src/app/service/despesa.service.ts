@@ -8,8 +8,8 @@ import { Reg } from '../model/reg';
 })
 export class DespesaService {
 
-  private apiUrl = 'https://adubadica.vercel.app/api/';
-  //private apiUrl = 'http://localhost:3000/api/';
+  //private apiUrl = 'https://adubadica.vercel.app/api/';
+  private apiUrl = 'http://localhost:3000/api/';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -19,7 +19,6 @@ export class DespesaService {
   constructor(private http: HttpClient) { }
 
   addReg(RegData: Partial<Reg>): Observable<Reg> {
-    console.log('Dados enviados para API (add):', RegData);
     return this.http.post<Reg>(this.apiUrl+'despesas', RegData, this.httpOptions)
       .pipe(
         catchError(error => {

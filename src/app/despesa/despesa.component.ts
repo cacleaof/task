@@ -72,4 +72,40 @@ export class DespesaComponent implements OnInit {
       });
     }
   }
+    reg = {
+    nome: '',
+    descricao: '',
+    valor: 0,
+    CD: 'D',
+    tipo: '',
+    venc: new Date,
+    imagem: '',
+    pix: '',
+    codbar: '',
+    pago: true
+  };
+
+  pagRegistro(reg: Reg): void {
+
+     const regData: Partial<Reg> = {
+      id: reg.id,
+      pago: !this.reg.pago || true
+    };
+ this.despesaService.updReg(regData)
+      .subscribe({
+        next: (response) => {
+          console.log('Registro atualizado com sucesso!', response);
+          alert('Registro atualizado com sucesso!');
+          // Navegar de volta para a lista após a atualização
+          this.router.navigate(['/registros']);
+        },
+        error: (error) => {
+          console.error('Erro ao atualizar registro:', error);
+          if (error.error) {
+            console.error('Mensagem do servidor:', error.error);
+            alert('Erro ao atualizar registro: ' + (error.error.message || 'Erro desconhecido'));
+          }
+        }
+      });
+    }
 }
