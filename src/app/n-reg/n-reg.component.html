@@ -1,35 +1,37 @@
+<div class="linhaform">
 <form (ngSubmit)="addReg()">
-  <div>
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" [(ngModel)]="reg.nome" required>
-  </div>
-    <div>
-    <label for="imagem">Html:</label>
-    <input type="text" id="imagem" name="imagem" [(ngModel)]="reg.imagem">
-  </div>
-  <div>
-    <label for="descricao">Descrição:</label>
-    <textarea id="descricao" name="descricao" [(ngModel)]="reg.descricao"></textarea>
-  </div>
-  <div>
-    <label for="valor">Valor:</label>
-    <input type="number" id="valor" name="valor" [(ngModel)]="reg.valor">
-  </div>
-  <div>
-    <label for="CD">C/D:</label>
-    <input type="text" id="CD" name="CD" [(ngModel)]="reg.CD">
-  </div>
-  <div>
-    <label for="tipo">Tipo:</label>
-    <input type="text" id="tipo" name="tipo" [(ngModel)]="reg.tipo">
-  </div>
-   <div>
-      <mat-form-field>
+    <mat-form-field class="nome">
+      <mat-label>Nome</mat-label>
+      <input matInput type="text" id="nome" name="nome" [(ngModel)]="reg.nome" required>
+    </mat-form-field>
+    <mat-form-field class="html">
+      <mat-label>Html</mat-label>
+    <input matInput type="text" id="imagem" name="imagem" [(ngModel)]="reg.imagem">
+    </mat-form-field>
+  <mat-form-field>
+    <mat-label class="descricao">Descrição</mat-label>
+    <textarea matInput id="descricao" name="descricao" [(ngModel)]="reg.descricao"></textarea>
+  </mat-form-field>
+      <mat-form-field class="valor" floatLabel="always">
+    <mat-label>Valor</mat-label>
+    <input matInput type="number" class="example-right-align" placeholder="" id="valor" name="valor"  [(ngModel)]="reg.valor"/>
+    <span matTextPrefix>$&nbsp;</span>
+    <span matTextSuffix>.00</span>
+  </mat-form-field>
+    <mat-form-field class="cd">
+    <mat-label>C/D:</mat-label>
+  <input matInput type="text" id="CD" name="CD" [(ngModel)]="reg.CD">
+  </mat-form-field>
+    <mat-form-field class="tipo">
+  <mat-label>Tipo</mat-label>
+  <input matInput  type="text" id="tipo" name="tipo" [(ngModel)]="reg.tipo">
+</mat-form-field>
+      <mat-form-field class="vencimento">
       <mat-label>Vencimento</mat-label>
       <input matInput [matDatepicker]="picker" [(ngModel)]="reg.venc" name="venc">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
-  </div>
-   <button type="submit">Adicionar Despesa</button>
+   <button class="botao" type="submit">Adicionar Despesa</button>
 </form>
+</div>

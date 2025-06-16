@@ -6,12 +6,12 @@ import { Reg } from '../model/reg';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 @Component({
   selector: 'app-n-reg',
    standalone: true,
-  imports: [FormsModule, CommonModule, MatDatepickerModule,
-        MatInputModule,
+  imports: [FormsModule, CommonModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatSelectModule,
         MatNativeDateModule],
   templateUrl: './n-reg.component.html',
   styleUrl: './n-reg.component.css'
