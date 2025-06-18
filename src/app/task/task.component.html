@@ -11,6 +11,8 @@
     <tr>
       <td>{{task.id}}</td>
       <td>{{task.nome}}</td>
+    <button (click)="deletar(task)">Delete</button>
+    <button (click)="editar(task)">Editar</button>
     </tr>
   </tbody>
 </table>

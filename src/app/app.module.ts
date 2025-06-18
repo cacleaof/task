@@ -18,6 +18,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { EditRegComponent } from './edit-reg/edit-reg.component';
+import { ContaComponent } from './conta/conta.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { EditRegComponent } from './edit-reg/edit-reg.component';
     TaskComponent,
     ProjFormComponent,
     DespesaComponent,
+    ContaComponent,
   ],
   imports: [
     BrowserModule,

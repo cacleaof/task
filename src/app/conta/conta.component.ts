@@ -1,16 +1,38 @@
 import { Component, OnInit } from '@angular/core';
 import { DespesaService } from '../service/despesa.service';
-import { Reg } from '../model/reg';
+//import { Reg } from '../model/reg';
 import { Router } from '@angular/router';
 
+export interface Reg {
+ id: string;
+ nome: string;
+ descricao: string;
+ valor: string | number;
+ CD: string;
+ tipo: string;
+ venc: string | Date;
+ imagem: string;
+ pago: boolean;
+ codbar: string;
+ pix: string;
+}
+
 @Component({
-  selector: 'app-despesa',
+  selector: 'app-conta',
   standalone: false,
-  templateUrl: './despesa.component.html',
-  styleUrl: './despesa.component.css'
+  templateUrl: './conta.component.html',
+  styleUrl: './conta.component.css'
 })
-export class DespesaComponent implements OnInit {
+export class ContaComponent implements OnInit {
   regs: Reg[] = [];
+
+    get regsNaoPagos(): Reg[] {
+    return this.regs.filter(r => !r.pago);   // mesmo que r.pago === false
+  }
+  get pagos(): Reg[] {
+    return this.regs.filter(reg => reg.pago === true);
+    }
+
   dataInicial: string = '';
   dataFinal: string = '';
 
@@ -62,12 +84,6 @@ export class DespesaComponent implements OnInit {
     } else {
       console.error('Registro não possui ID:', reg);
     }
-  }
-
- filtrarPago() {
-      this.regs = this.regs.filter(reg => {
-        return reg.pago == false;
-      });
   }
 
   filtrarPorData() {

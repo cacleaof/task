@@ -16,7 +16,8 @@ const routes: Routes = [
   { path: 'nproj', component: ProjFormComponent},
   { path: 'ntask', component: NTaskComponent},
   { path: 'nreg', component: NRegComponent},
-  { path: 'edit/:id', component: EditRegComponent }
+  { path: 'edit/:id', component: EditRegComponent },
+  { path: 'contas', component: DespesaComponent }
 ];
 
 @NgModule({

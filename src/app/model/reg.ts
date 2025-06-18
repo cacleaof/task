@@ -10,4 +10,6 @@ export interface Reg {
  pago: boolean;
  codbar: string;
  pix: string;
+ parc: number;
+ nparc: number;
 }

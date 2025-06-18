@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Fluxo de Caixa</h2><button (click)="filtrarPago()">Contas a Pagar</button>
+  <h2>Fluxo de Caixa</h2>
   <div>
     <label for="dataInicial">Data Inicial:</label>
     <input type="date" id="dataInicial" [(ngModel)]="dataInicial">
@@ -18,8 +18,7 @@
   <th>Vencimento</th>
 </tr>
   </thead>
-  <tbody *ngFor="let reg of regs">
-
+  <tbody *ngFor="let reg of regsNaoPagos">
 <tr><td *ngIf="reg.imagem; else: semimagem"><a href="{{reg.imagem}}" target="_blank">{{reg.nome}}</a></td>
 <ng-template #semimagem>
   <td>{{reg.nome}}</td>

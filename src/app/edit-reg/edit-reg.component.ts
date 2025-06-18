@@ -27,6 +27,8 @@ export class EditRegComponent implements OnInit {
     tipo: '',
     venc: new Date(),
     imagem: '',
+    parc: 0,
+    nparc: 0,
   };
 
   constructor(
@@ -51,7 +53,9 @@ export class EditRegComponent implements OnInit {
           CD: regToEdit.CD,
           tipo: regToEdit.tipo,
           venc: regToEdit.venc instanceof Date ? regToEdit.venc : new Date(regToEdit.venc),
-          imagem: regToEdit.imagem || ''
+          imagem: regToEdit.imagem || '',
+          parc: regToEdit.parc || 0,
+          nparc: regToEdit.nparc || 0,
         };
         console.log('Dados carregados no formulário:', this.reg);
 
@@ -85,7 +89,9 @@ export class EditRegComponent implements OnInit {
                 CD: regToEdit.CD,
                 tipo: regToEdit.tipo,
                 venc: regToEdit.venc instanceof Date ? regToEdit.venc : new Date(regToEdit.venc),
-                imagem: regToEdit.imagem || ''
+                imagem: regToEdit.imagem || '',
+                parc: regToEdit.parc || 0,
+                nparc: regToEdit.nparc || 0,
               };
               console.log('Dados carregados no formulário:', this.reg);
             } else {
@@ -126,7 +132,9 @@ export class EditRegComponent implements OnInit {
       CD: String(this.reg.CD),
       tipo: String(this.reg.tipo).trim(),
       venc: dataFormatada,
-      imagem: String(this.reg.imagem).trim()
+      imagem: String(this.reg.imagem).trim(),
+      parc: Number(this.reg.parc),
+      nparc: Number(this.reg.nparc),
     };
 
     console.log('Dados para atualização:', JSON.stringify(regData, null, 2));
