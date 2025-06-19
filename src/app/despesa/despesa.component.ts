@@ -101,7 +101,7 @@ export class DespesaComponent implements OnInit {
       .subscribe({
         next: (response) => {
           console.log('Registro atualizado com sucesso!', response);
-          alert('Registro atualizado com sucesso!');
+          //alert('Registro atualizado com sucesso!');
           // Navegar de volta para a lista após a atualização
           this.router.navigate(['/registros']);
         },

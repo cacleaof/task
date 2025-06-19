@@ -7,8 +7,8 @@ import { Proj } from '../model/proj';
   providedIn: 'root'
 })
 export class ProjService {
-    //private apiUrl = 'https://adubadica.vercel.app/api/';
-  private apiUrl = 'http://localhost:3000/api/';
+  private apiUrl = 'https://adubadica.vercel.app/api/';
+  //private apiUrl = 'http://localhost:3000/api/';
 
     private httpOptions = {
     headers: new HttpHeaders({
